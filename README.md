@@ -23,6 +23,7 @@ You can follow my workflow which i've made on [trello.com](https://trello.com/b/
 
 ### Hints: ###
 
-1. BestPractice of *gitflow* ([habrahabr](http://habrahabr.ru/post/106912/))
-2. LOFTblog on *YOUtube* ([folow their](https://www.youtube.com/user/loftblog))
-3. Simple html *templete* watch on [initializr.com](http://www.initializr.com/)
+1. BestPractice of **gitflow** ([habrahabr](http://habrahabr.ru/post/106912/))
+2. **LOFTblog** official page ([subscribe](http://loftblog.ru/))
+2. LOFTblog on **YOUtube** ([folow their](https://www.youtube.com/user/loftblog))
+3. Simple html5 **templete** watch on [initializr.com](http://www.initializr.com/)
