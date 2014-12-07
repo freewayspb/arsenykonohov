@@ -2,13 +2,13 @@
 @import url('dev/global.less');
 
 /* ==========================================================================
-   Author custom code
+   Author custom code  /  Author custom code  /  Author custom code  /  
    ========================================================================== */
 
-/*=================== variables =================== */
-
-
-/*=================== mixins =================== */
+/* =================== variables =================== */
+@fibonachiCount: 30px;
+@wrapperForDesctop: 960px;
+/* =================== mixins =================== */
 
 .clearfix {
     *zoom: ~"expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif')";
@@ -46,19 +46,109 @@
 }
 
 
-/*=================== common for page =================== */
+/* =================== common for page =================== */
+body {
+	background: url(../img/bg.png)
+}
+/* page */
+.b-page {
+	min-width: 100%;
+	width: 100%;
+	.clearfix;
+}
+/* page lines */
+.page__line {
+	min-width: 100%;
+	position: relative;
+	width: 100%;
+	.clearfix;
+}
+/* block wrapper */
+.b-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: @wrapperForDesctop;
+	.clearfix;
+}
+/* wrapper elements */
+.wrapper__coll {
+	background: #ddd;
+	position: relative;
+	.clearfix;
+}
+
+
+.wrapper__coll_left {
+	float: left;
+}
+.wrapper__coll_left_header{
+	height: @fibonachiCount*2;
+	width: @fibonachiCount*5;
+}
+.wrapper__coll_left_body {
+	height: @fibonachiCount*3;
+	width: @fibonachiCount*8;
+}
+
+
+.wrapper__coll_right {
+	float: right;
+}
+.wrapper__coll_right_header {
+	height: @fibonachiCount*2;
+	width: @fibonachiCount*13;
+}
+.wrapper__coll_right_body {
+	height: @fibonachiCount*13;
+	width: @fibonachiCount*21;
+}
 
 
 
+.wrapper__coll_firsst_social {
+	background: #3883db;
+}
 
-/*=================== header =================== */
+.wrapper__coll_last_social {
+	background: #3838db;
+}
 
 
+/* =================== header =================== */
+.page__line_head {
+	background: #777;
+	border-bottom: 4px solid #333;
+	min-height: @fibonachiCount*4;
+}
+.wrapper_header {
+	
+}
 
+/* =================== content & navBar =================== */
+.wrapper_body {
+	height: @fibonachiCount*21;
+}
 
-
+/* =================== footer =================== */
+.page__line_foot {
+	background: #777;
+	border-top: 4px solid #333;
+	min-height: @fibonachiCount*3;
+}
+.wrapper_footer {
+	
+}
 /* ==========================================================================
-   Media Queries
+   Media Queries /  Media Queries /  Media Queries /  Media Queries /  
    ========================================================================== */
 
 @import url('dev/media.less');
+
+
+
+
+
+
+
+
+
