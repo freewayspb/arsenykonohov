@@ -419,12 +419,18 @@ textarea {
   clear: both;
 }
 /* =================== common for page =================== */
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   background: url(../img/bg.png);
 }
 /* page */
 .b-page {
+  height: 100%;
   min-width: 100%;
+  position: relative;
   width: 100%;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
@@ -487,22 +493,8 @@ body {
 .wrapper__coll_left {
   float: left;
 }
-.wrapper__coll_left_body {
-  height: 90px;
-  width: 240px;
-}
 .wrapper__coll_right {
   float: right;
-}
-.wrapper__coll_right_body {
-  height: 390px;
-  width: 630px;
-}
-.wrapper__coll_firsst_social {
-  background: #3883db;
-}
-.wrapper__coll_last_social {
-  background: #3838db;
 }
 /* =================== header =================== */
 .page__line_head {
@@ -510,27 +502,63 @@ body {
   border-bottom: 4px solid #333;
   min-height: 120px;
 }
+/* logo */
+.wrapper__coll_logo {
+  height: 116px;
+  padding: 25px 0 0 0;
+}
 .logo {
-  font: bold 2.2rem sans-serif;
+  font: bold 2.5rem sans-serif;
   text-transform: uppercase;
 }
 .description {
-  font: normal 0.75rem sans-serif;
+  border-top: 2px solid #333;
+  font: normal 0.84rem sans-serif;
+  padding: 5px 0 0 0;
   text-transform: uppercase;
 }
+/* social */
 .wrapper__coll_firsst_social {
+  display: block;
   height: 116px;
   width: 390px;
 }
 /* =================== content & navBar =================== */
+.page__line_body {
+  min-height: 100%;
+  margin: -120px 0 -90px 0;
+  padding: 120px 0 90px 0;
+}
 .wrapper_body {
+  min-height: 100%;
+  padding: 30px 0;
+}
+/* navbar */
+.wrapper__coll_nav {
+  height: 390px;
+  width: 240px;
+}
+/* article */
+.wrapper__coll_article {
   height: 630px;
+  width: 630px;
+}
+/* contacts */
+.wrapper__coll_contact {
+  height: 90px;
+  width: 240px;
+}
+/* social */
+.wrapper__coll_last_social {
+  display: block;
+  height: 90px;
+  width: 240px;
 }
 /* =================== footer =================== */
 .page__line_foot {
   background: #777;
   border-top: 4px solid #333;
-  min-height: 90px;
+  height: 90px;
 }
 /* ==========================================================================
    FONT-FACES /  FONT-FACES /  FONT-FACES /  FONT-FACES /  FONT-FACES /

@@ -7,6 +7,8 @@
 
 /* =================== variables =================== */
 @fibonachiCount: 30px;
+@header: @fibonachiCount*4;
+@footer: @fibonachiCount*3;
 @wrapperForDesctop: 960px;
 /* =================== mixins =================== */
 
@@ -47,12 +49,18 @@
 
 
 /* =================== common for page =================== */
+html {
+	height: 100%;
+}
 body {
+	height: 100%;
 	background: url(../img/bg.png)
 }
 /* page */
 .b-page {
+	height: 100%;
 	min-width: 100%;
+	position: relative;
 	width: 100%;
 	.clearfix;
 }
@@ -68,12 +76,12 @@ body {
 	position: relative;
 	margin: 0 auto;
 	position: relative;
-	width: @wrapperForDesctop;
+	width: @fibonachiCount*32;
 	.clearfix;
 }
 /* wrapper elements */
 .wrapper__coll {
-	background: #ddd;
+	background: #ddd;										// deletede
 	position: relative;
 	.clearfix;
 }
@@ -82,28 +90,8 @@ body {
 .wrapper__coll_left {
 	float: left;
 }
-.wrapper__coll_left_body {
-	height: @fibonachiCount*3;
-	width: @fibonachiCount*8;
-}
-
-
 .wrapper__coll_right {
 	float: right;
-}
-.wrapper__coll_right_body {
-	height: @fibonachiCount*13;
-	width: @fibonachiCount*21;
-}
-
-
-
-.wrapper__coll_firsst_social {
-	background: #3883db;
-}
-
-.wrapper__coll_last_social {
-	background: #3838db;
 }
 
 
@@ -120,40 +108,74 @@ body {
 }
 
 
+/* logo */
 .wrapper__coll_logo {
-	
+	height: (@fibonachiCount*4)-4px;
+	padding: (@fibonachiCount)-5px 0 0 0;
 }
 .logo {
-	font: bold 2.2rem sans-serif;
+	font: bold 2.5rem sans-serif;
 	
 	text-transform: uppercase;
 }
 .description {
-	font: normal 0.75rem sans-serif;
+	border-top: 2px solid #333;
+	font: normal 0.84rem sans-serif;
+	padding: 5px 0 0 0;
 	text-transform: uppercase;
 }
 
 
-
+/* social */
 .wrapper__coll_firsst_social {
+	display: block;
 	height: (@fibonachiCount*4)-4px;
 	width: @fibonachiCount*13;
 }
 
 
 
-
-
 /* =================== content & navBar =================== */
-.wrapper_body {
-	height: @fibonachiCount*21;
+
+.page__line_body {
+	min-height: 100%;
+	margin: -@header 0 -@footer 0;
+	padding: @header 0 @footer 0;
 }
+.wrapper_body {
+	min-height: 100%;
+	padding: @fibonachiCount 0;
+}
+
+/* navbar */
+.wrapper__coll_nav {
+	height: @fibonachiCount*13;										// deletede
+	width: @fibonachiCount*8;
+}
+/* article */
+.wrapper__coll_article {
+	height: @fibonachiCount*21;										// deletede
+	width: @fibonachiCount*21;
+}
+/* contacts */
+.wrapper__coll_contact {
+	height: @fibonachiCount*3;										// deletede
+	width: @fibonachiCount*8;
+}
+/* social */
+.wrapper__coll_last_social {
+	display: block;
+	height: @fibonachiCount*3;										// deletede
+	width: @fibonachiCount*8;
+
+}
+
 
 /* =================== footer =================== */
 .page__line_foot {
 	background: #777;
 	border-top: 4px solid #333;
-	min-height: @fibonachiCount*3;
+	height: @footer;
 }
 .wrapper_footer {
 	
