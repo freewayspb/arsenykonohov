@@ -25,6 +25,14 @@
 	}
 }
 
+.textshadow (@tshadow) {
+	-webkit-text-shadow: @tshadow;
+	-moz-text-shadow: 	 @tshadow;
+	-ms-text-shadow: 	 @tshadow;
+	-o-text-shadow: 	 @tshadow;
+	text-shadow: 		 @tshadow;
+}
+
 .transition (@transition) {
 	-webkit-transition: @transition;
 	-moz-transition:    @transition;
@@ -89,7 +97,7 @@ a {
 }
 /* wrapper elements */
 .wrapper__coll {
-	background: #ddd;										// deletede
+//	background: #ddd;										// deletede
 	position: relative;
 	.clearfix;
 }
@@ -107,7 +115,7 @@ a {
 
 /* =================== header =================== */
 .page__line_head {
-	background: #777;
+	background: #555;
 	border-bottom: 4px solid #333;
 	min-height: @fibonachiCount*4;
 }
@@ -122,12 +130,14 @@ a {
 	padding: (@fibonachiCount)-5px 0 0 0;
 }
 .logo {
+	color: #eee;
 	font: bold 2.5rem sans-serif;
-	
 	text-transform: uppercase;
+//	.textshadow (@tshadow: 0px 2px 1px rgba(0, 0, 0, 0.8);)
 }
 .description {
-	border-top: 2px solid #333;
+	border-top: 2px solid #ddd;
+	color: #eee;
 	font: normal 0.84rem sans-serif;
 	padding: 5px 0 0 0;
 	text-transform: uppercase;
@@ -238,22 +248,25 @@ a {
 .contact__list {
 	color: #fff;
 	font: normal 0.95rem sans-serif;
-	line-height: @fibonachiCount;
+	line-height: @fibonachiCount+10px;
 	text-indent: @fibonachiCount+10px;
 }
 
 .contact__item {
 	&:nth-child(1) {
-		background: #800 url(../img/sprites.png) -5px -55px no-repeat;
+		background: #800 url(../img/sprites.png) 0 -50px no-repeat;
 		background-size: 17%;
 	}
 	&:nth-child(2) {
-		background: #a00 url(../img/sprites.png) -5px -25px no-repeat;
+		background: #a00 url(../img/sprites.png) 0 -20px no-repeat;
 		background-size: 17%;
 	}
 	&:nth-child(3) {
-		background: #c00 url(../img/sprites.png) -5px 5px no-repeat;
+		background: #c00 url(../img/sprites.png) 0 10px no-repeat;
 		background-size: 17%;
+	}
+	a {
+		display: block;
 	}
 }
 
