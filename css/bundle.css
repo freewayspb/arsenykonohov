@@ -455,8 +455,8 @@ body {
 }
 /* block wrapper */
 .b-wrapper {
-  position: relative;
   margin: 0 auto;
+  position: relative;
   width: 960px;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
@@ -487,20 +487,12 @@ body {
 .wrapper__coll_left {
   float: left;
 }
-.wrapper__coll_left_header {
-  height: 60px;
-  width: 150px;
-}
 .wrapper__coll_left_body {
   height: 90px;
   width: 240px;
 }
 .wrapper__coll_right {
   float: right;
-}
-.wrapper__coll_right_header {
-  height: 60px;
-  width: 390px;
 }
 .wrapper__coll_right_body {
   height: 390px;
@@ -518,6 +510,18 @@ body {
   border-bottom: 4px solid #333;
   min-height: 120px;
 }
+.logo {
+  font: bold 2.2rem sans-serif;
+  text-transform: uppercase;
+}
+.description {
+  font: normal 0.75rem sans-serif;
+  text-transform: uppercase;
+}
+.wrapper__coll_firsst_social {
+  height: 116px;
+  width: 390px;
+}
 /* =================== content & navBar =================== */
 .wrapper_body {
   height: 630px;
@@ -528,6 +532,9 @@ body {
   border-top: 4px solid #333;
   min-height: 90px;
 }
+/* ==========================================================================
+   FONT-FACES /  FONT-FACES /  FONT-FACES /  FONT-FACES /  FONT-FACES /
+   ========================================================================== */
 /* ==========================================================================
    Media Queries /  Media Queries /  Media Queries /  Media Queries /  
    ========================================================================== */
