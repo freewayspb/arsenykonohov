@@ -5,7 +5,53 @@
    Author custom code
    ========================================================================== */
 
+/*=================== variables =================== */
 
+
+/*=================== mixins =================== */
+
+.clearfix {
+    *zoom: ~"expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif')";
+    zoom: 1 !ie;
+    &:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+	transition:      	@transition;
+}
+
+.sadow (@sadow) {
+	-webkit-box-shadow: @sadow;
+	-moz-box-shadow: 	@sadow;
+	box-shadow: 		@sadow;
+}
+
+.radius (@value: 50%;) {
+	-webkit-border-radius: 	@value;
+	-moz-border-radius: 	@value;
+	-ms-border-radius: 		@value;
+	-o-border-radius: 		@value;
+	border-radius: 			@value;
+}
+
+
+/*=================== common for page =================== */
+
+
+
+
+/*=================== header =================== */
 
 
 

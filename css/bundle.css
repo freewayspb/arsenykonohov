@@ -589,6 +589,22 @@ textarea {
 /* ==========================================================================
    Author custom code
    ========================================================================== */
+/*=================== variables =================== */
+/*=================== mixins =================== */
+.clearfix {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*=================== common for page =================== */
+/*=================== header =================== */
 /* ==========================================================================
    Media Queries
    ========================================================================== */
