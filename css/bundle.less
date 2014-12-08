@@ -5,12 +5,18 @@
    Author custom code  /  Author custom code  /  Author custom code  /  
    ========================================================================== */
 
-/* =================== variables =================== */
+/* ====================================== variables ====================================== */
 @fibonachiCount: 30px;
 @header: @fibonachiCount*4;
 @footer: @fibonachiCount*3;
 @wrapperForDesctop: 960px;
-/* =================== mixins =================== */
+
+@headingText: #555;
+
+
+
+
+/* ====================================== mixins ====================================== */
 
 .clearfix {
     *zoom: ~"expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif')";
@@ -56,14 +62,20 @@
 }
 
 
-/* =================== common for page =================== */
+
+
+/* ====================================== common for page ====================================== */
 html {
 	height: 100%;
+	width: 100%;
+	min-width: 100%;
 }
 body {
 	height: 100%;
 //	background: url(../img/bg.png);
 	background: #f1f1f1;
+	width: 100%;
+	min-width: 100%;
 }
 a {
 	text-decoration: none;
@@ -72,21 +84,31 @@ a {
 		color: inherit;
 	}
 }
+
+
+
 /* page */
 .b-page {
 	height: 100%;
-	min-width: 100%;
 	position: relative;
 	width: 100%;
+	min-width: 100%;
 	.clearfix;
 }
+
+
+
 /* page lines */
 .page__line {
 	min-width: 100%;
 	position: relative;
 	width: 100%;
+	min-width: 100%;
 	.clearfix;
 }
+
+
+
 /* block wrapper */
 .b-wrapper {
 	position: relative;
@@ -95,13 +117,14 @@ a {
 	width: @fibonachiCount*32;
 	.clearfix;
 }
+
+
+
 /* wrapper elements */
 .wrapper__coll {
-//	background: #ddd;										// deletede
 	position: relative;
 	.clearfix;
 }
-
 
 .wrapper__coll_left {
 	float: left;
@@ -113,10 +136,11 @@ a {
 
 
 
-/* =================== header =================== */
+/* ====================================== header ====================================== */
+
 .page__line_head {
-	background: #555;
-	border-bottom: 4px solid #333;
+	background: #444;
+	border-bottom: 4px solid #222;
 	min-height: @fibonachiCount*4;
 }
 .wrapper_header {
@@ -133,7 +157,6 @@ a {
 	color: #eee;
 	font: bold 2.5rem sans-serif;
 	text-transform: uppercase;
-//	.textshadow (@tshadow: 0px 2px 1px rgba(0, 0, 0, 0.8);)
 }
 .description {
 	border-top: 2px solid #ddd;
@@ -144,7 +167,7 @@ a {
 }
 
 
-/* social */
+/* ====================================== social ====================================== */
 .wrapper__coll_firsst_social {
 	display: block;
 	position: relative;
@@ -161,7 +184,6 @@ a {
 	padding: @fibonachiCount 0 0 0;
 	.clearfix;
 }
-
 .social__item {
 	background: #c00;
 	border: 4px solid #eee;
@@ -175,7 +197,7 @@ a {
 	width: @fibonachiCount*2;
 	.radius (@value: 50%;);
 	&:hover {
-		.shadow(@shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.6););
+		.shadow(@shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.8););
 	}
 	a {
 		display: block;
@@ -198,20 +220,16 @@ a {
 		background: #a00 url(../img/socialsprites.png) 6px -152px no-repeat;
 		background-size: 100%;
 	}
-	
+	&:nth-child(4+n) {
+		background: #a00 url(../img/socialsprites.png) 6px -152px no-repeat;
+		background-size: 100%;
+	}
 }
 
 
 
 
-
-
-
-
-
-
-
-/* =================== content & navBar =================== */
+/* =================== content =================== */
 
 .page__line_body {
 	min-height: 100%;
@@ -224,7 +242,8 @@ a {
 }
 
 
-/* navbar */
+/* ====================================== navBar ====================================== */
+
 .wrapper__coll_nav {
 	width: @fibonachiCount*8;
 }
@@ -325,16 +344,131 @@ a {
 	}
 }
 
-/* article */
+
+
+
+/* ====================================== article ====================================== */
+
 .wrapper__coll_article {
-	height: @fibonachiCount*21;										// deletede
 	width: @fibonachiCount*21;
+}
+.b-article {
+	width: 100%;
+}
+.article__header {
+	border-bottom: solid 2px @headingText;
+	display: block;
+	text-align: left
+}
+
+.text {
+	display: inline-block;
+	&:first-letter {
+		text-transform: uppercase;
+	}
+}
+
+
+
+.linehieght_head {
+	line-height: @fibonachiCount*2;
+}
+.linehieght_text {
+	line-height: @fibonachiCount*1.5;
+}
+
+
+
+.text_heading_article {
+	color: @headingText;
+	font: normal 34px sans-serif;
+}
+.article__content {
+	padding: @fibonachiCount*1 0 @fibonachiCount*2 0;
+	.clearfix;
+}
+.b-userpic {
+	float: left;
+	height: @fibonachiCount*7;
+	margin: @fibonachiCount 0 0 0;
+	overflow: hidden;
+	border: 8px solid #eee;
+	width: @fibonachiCount*7;
+	.radius (@value: 50%;);
+	.shadow(@shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3););
+	img {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}
+.b-userdescript {
+	float: right;
+	padding: 0 0 0 @fibonachiCount;
+	text-align: left;
+	width: 100%;
+}
+.userdescript_common {
+//	margin:  -@fibonachiCount*0.5 0 0 0;
+	width: 65% !important;
+}
+.userdescript__list {
+	position: relative;
+	width: 100%;
+}
+.userdescript__item {
+	display: block;
+	min-height: @fibonachiCount*1.5;
+	width: 100%;
+}
+.userdescript__head {
+	font: bold 1rem sans-serif;
+}
+.userdescript__content {
+	font: normal 1rem sans-serif;
 }
 
 
 
 
-/* =================== footer =================== */
+.stick {
+	margin-top: @fibonachiCount*.5;
+	padding-left: @fibonachiCount*3;
+	&:first-child {
+		margin-top: 0 !important;
+	}
+}
+.work {
+	background: url(../img/work.png) 0px 5px no-repeat;
+	background-size: 6%;
+}
+.edu {
+	background: url(../img/edu.png) 0px 10px no-repeat;
+	background-size: 7%;
+}
+.loft {
+	background: url(../img/loft.png) 8px 5px no-repeat;
+	background-size: 5%;
+}
+
+
+
+
+.name {
+	text-transform: capitalize;
+}
+.skils {
+	color: #fff;
+	background: #a00;
+	line-height: (@fibonachiCount)-7px;
+	padding: 0 10px;
+}
+
+
+
+
+/* ====================================== footer ====================================== */
+
 .page__line_foot {
 	background: #777;
 	border-top: 4px solid #333;

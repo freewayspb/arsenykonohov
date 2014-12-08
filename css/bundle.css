@@ -404,8 +404,8 @@ textarea {
 /* ==========================================================================
    Author custom code  /  Author custom code  /  Author custom code  /  
    ========================================================================== */
-/* =================== variables =================== */
-/* =================== mixins =================== */
+/* ====================================== variables ====================================== */
+/* ====================================== mixins ====================================== */
 .clearfix {
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
@@ -418,13 +418,17 @@ textarea {
 .clearfix:after {
   clear: both;
 }
-/* =================== common for page =================== */
+/* ====================================== common for page ====================================== */
 html {
   height: 100%;
+  width: 100%;
+  min-width: 100%;
 }
 body {
   height: 100%;
   background: #f1f1f1;
+  width: 100%;
+  min-width: 100%;
 }
 a {
   text-decoration: none;
@@ -436,9 +440,9 @@ a:visited {
 /* page */
 .b-page {
   height: 100%;
-  min-width: 100%;
   position: relative;
   width: 100%;
+  min-width: 100%;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -452,9 +456,9 @@ a:visited {
 }
 /* page lines */
 .page__line {
-  min-width: 100%;
   position: relative;
   width: 100%;
+  min-width: 100%;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -502,10 +506,10 @@ a:visited {
 .wrapper__coll_right {
   float: right;
 }
-/* =================== header =================== */
+/* ====================================== header ====================================== */
 .page__line_head {
-  background: #555;
-  border-bottom: 4px solid #333;
+  background: #444;
+  border-bottom: 4px solid #222;
   min-height: 120px;
 }
 .wrapper_header {
@@ -528,7 +532,7 @@ a:visited {
   padding: 5px 0 0 0;
   text-transform: uppercase;
 }
-/* social */
+/* ====================================== social ====================================== */
 .wrapper__coll_firsst_social {
   display: block;
   position: relative;
@@ -572,9 +576,9 @@ a:visited {
   border-radius: 50%;
 }
 .social__item:hover {
-  -webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.8);
 }
 .social__item a {
   display: block;
@@ -597,7 +601,11 @@ a:visited {
   background: #aa0000 url(../img/socialsprites.png) 6px -152px no-repeat;
   background-size: 100%;
 }
-/* =================== content & navBar =================== */
+.social__item:nth-child(4+n) {
+  background: #aa0000 url(../img/socialsprites.png) 6px -152px no-repeat;
+  background-size: 100%;
+}
+/* =================== content =================== */
 .page__line_body {
   min-height: 100%;
   margin: -120px 0 -90px 0;
@@ -607,7 +615,7 @@ a:visited {
   min-height: 100%;
   padding: 30px 0;
 }
-/* navbar */
+/* ====================================== navBar ====================================== */
 .wrapper__coll_nav {
   width: 240px;
 }
@@ -707,12 +715,121 @@ a:visited {
 .contact__item a {
   display: block;
 }
-/* article */
+/* ====================================== article ====================================== */
 .wrapper__coll_article {
-  height: 630px;
   width: 630px;
 }
-/* =================== footer =================== */
+.b-article {
+  width: 100%;
+}
+.article__header {
+  border-bottom: solid 2px #555555;
+  display: block;
+  text-align: left;
+}
+.text {
+  display: inline-block;
+}
+.text:first-letter {
+  text-transform: uppercase;
+}
+.linehieght_head {
+  line-height: 60px;
+}
+.linehieght_text {
+  line-height: 45px;
+}
+.text_heading_article {
+  color: #555555;
+  font: normal 34px sans-serif;
+}
+.article__content {
+  padding: 30px 0 60px 0;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.article__content:before,
+.article__content:after {
+  content: "";
+  display: table;
+}
+.article__content:after {
+  clear: both;
+}
+.b-userpic {
+  float: left;
+  height: 210px;
+  margin: 30px 0 0 0;
+  overflow: hidden;
+  border: 8px solid #eee;
+  width: 210px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+}
+.b-userpic img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.b-userdescript {
+  float: right;
+  padding: 0 0 0 30px;
+  text-align: left;
+  width: 100%;
+}
+.userdescript_common {
+  width: 65% !important;
+}
+.userdescript__list {
+  position: relative;
+  width: 100%;
+}
+.userdescript__item {
+  display: block;
+  min-height: 45px;
+  width: 100%;
+}
+.userdescript__head {
+  font: bold 1rem sans-serif;
+}
+.userdescript__content {
+  font: normal 1rem sans-serif;
+}
+.stick {
+  margin-top: 15px;
+  padding-left: 90px;
+}
+.stick:first-child {
+  margin-top: 0 !important;
+}
+.work {
+  background: url(../img/work.png) 0px 5px no-repeat;
+  background-size: 6%;
+}
+.edu {
+  background: url(../img/edu.png) 0px 10px no-repeat;
+  background-size: 7%;
+}
+.loft {
+  background: url(../img/loft.png) 8px 5px no-repeat;
+  background-size: 5%;
+}
+.name {
+  text-transform: capitalize;
+}
+.skils {
+  color: #fff;
+  background: #a00;
+  line-height: 23px;
+  padding: 0 10px;
+}
+/* ====================================== footer ====================================== */
 .page__line_foot {
   background: #777;
   border-top: 4px solid #333;
