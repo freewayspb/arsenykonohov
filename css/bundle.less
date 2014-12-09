@@ -14,8 +14,40 @@
 @headingText: #555;
 
 
+.patern {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-image:
+		-webkit-gradient(radial, 50% 27%, 0, 50% 27%, 5, 	from(transparent), color-stop(0.2, transparent),color-stop(0.2, rgba(0, 0, 0, 0.2)),color-stop(0.4, rgba(0, 0, 0, 0.2)),color-stop(0.5, rgba(0, 0, 0, 0.2)),color-stop(0.5, transparent), to(transparent) ),
+		-webkit-gradient(radial, 100% 75%, 0, 100% 75%, 5, 	from(transparent), color-stop(0.2, transparent),color-stop(0.2, rgba(0, 0, 0, 0.2)),color-stop(0.4, rgba(0, 0, 0, 0.2)),color-stop(0.5, rgba(0, 0, 0, 0.2)),color-stop(0.5, transparent), to(transparent) ),
+		-webkit-gradient(radial, 0% 75%, 0, 0% 75%, 5, 		from(transparent), color-stop(0.2, transparent),color-stop(0.2, rgba(0, 0, 0, 0.2)),color-stop(0.4, rgba(0, 0, 0, 0.2)),color-stop(0.5, rgba(0, 0, 0, 0.2)),color-stop(0.5, transparent), to(transparent) );
+	/* Background images size */
+	background-size: 8px 15px;
+	/* Background images position*/
+	//   background-position: 0 0, 100px 100px;
+}
 
 
+.lineargradientskils {
+	background: rgba(187,0,0,1);/* Old Browsers */
+	background: -moz-linear-gradient(top, rgba(187,0,0,1) 0%, rgba(187,0,0,1) 49%, rgba(136,0,0,1) 51%, rgba(136,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(187,0,0,1)), color-stop(49%, rgba(187,0,0,1)), color-stop(51%, rgba(136,0,0,1)), color-stop(100%, rgba(136,0,0,1)));/* Chrome, Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(187,0,0,1) 0%, rgba(187,0,0,1) 49%, rgba(136,0,0,1) 51%, rgba(136,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(187,0,0,1) 0%, rgba(187,0,0,1) 49%, rgba(136,0,0,1) 51%, rgba(136,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(187,0,0,1) 0%, rgba(187,0,0,1) 49%, rgba(136,0,0,1) 51%, rgba(136,0,0,1) 100%); /* IE 10+ */
+	background: linear-gradient(to bottom, rgba(187,0,0,1) 0%, rgba(187,0,0,1) 49%, rgba(136,0,0,1) 51%, rgba(136,0,0,1) 100%);/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb0000', endColorstr='#880000', GradientType=0 );/* IE6-9 */
+}
+
+.lineargradientfooter {
+	background: rgba(119,119,119,1);/* Old Browsers */
+	background: -moz-linear-gradient(top, rgba(119,119,119,1) 0%, rgba(51,51,51,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(119,119,119,1)), color-stop(100%, rgba(51,51,51,1)));/* Chrome, Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(119,119,119,1) 0%, rgba(51,51,51,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(119,119,119,1) 0%, rgba(51,51,51,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(119,119,119,1) 0%, rgba(51,51,51,1) 100%); /* IE 10+ */
+	background: linear-gradient(to bottom, rgba(119,119,119,1) 0%, rgba(51,51,51,1) 100%);/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#333333', GradientType=0 );/* IE6-9 */
+}
 /* ====================================== mixins ====================================== */
 
 .clearfix {
@@ -67,14 +99,14 @@
 /* ====================================== common for page ====================================== */
 html {
 	height: 100%;
-	width: 100%;
+//	width: 100%;
 	min-width: 100%;
 }
 body {
 	height: 100%;
 //	background: url(../img/bg.png);
 	background: #f1f1f1;
-	width: 100%;
+//	width: 100%;
 	min-width: 100%;
 }
 a {
@@ -91,7 +123,7 @@ a {
 .b-page {
 	height: 100%;
 	position: relative;
-	width: 100%;
+//	width: 100%;
 	min-width: 100%;
 	.clearfix;
 }
@@ -384,13 +416,13 @@ a {
 	font: normal 34px sans-serif;
 }
 .article__content {
-	padding: @fibonachiCount*1 0 @fibonachiCount*2 0;
+	padding: 0 0 @fibonachiCount*2 0;
 	.clearfix;
 }
 .b-userpic {
 	float: left;
 	height: @fibonachiCount*7;
-	margin: @fibonachiCount 0 0 0;
+	margin: @fibonachiCount*2 0 0 0;
 	overflow: hidden;
 	border: 8px solid #eee;
 	width: @fibonachiCount*7;
@@ -404,6 +436,7 @@ a {
 }
 .b-userdescript {
 	float: right;
+	margin: @fibonachiCount 0 0 0;
 	padding: 0 0 0 @fibonachiCount;
 	text-align: left;
 	width: 100%;
@@ -430,6 +463,17 @@ a {
 
 
 
+.name {
+	text-transform: capitalize;
+}
+.skils {
+	color: #fff;
+	line-height: (@fibonachiCount)-7px;
+	padding: 0 10px;
+	.lineargradientskils;
+}
+
+
 
 .stick {
 	margin-top: @fibonachiCount*.5;
@@ -453,31 +497,124 @@ a {
 
 
 
+/* ====================================== my portfolio ====================================== */
 
-.name {
-	text-transform: capitalize;
-}
-.skils {
-	color: #fff;
-	background: #a00;
-	line-height: (@fibonachiCount)-7px;
-	padding: 0 10px;
+
+.portfolio {
+	display: block;
+	position: relative;
+	text-align: left;
 }
 
+.portfolio__item {
+	display: inline-block;
+	padding: @fibonachiCount @fibonachiCount*.5;
+	position: relative;
+	width: 33.333333%;
+	&:last-child > .portfolio__img {
+		background: #f1f1f1;
+	}
+	&:last-child > .portfolio__name {
+		background: none;
+		a {
+			background: #f1f1f1;
+			color: #444;
+			border: 3px solid #777;
+		}
+	}
+	&:hover > .portfolio__name {
+		display: block !important;
+		a {
+			font: normal 1rem sans-serif;
+			line-height: @fibonachiCount;
+			padding: 0 @fibonachiCount*.5;
+			transition: all ease 1s;																// WTF	?????????????????
+		}
+	}
+}
+
+.portfolio__img {
+	background: url(../img/some_site.png) no-repeat;
+	background-size: 100%;
+	border: 2px solid #777;
+	display: block;
+	height: @fibonachiCount*4;
+	position: relative;
+	.radius (@value: 5px;);
+}
+
+.portfolio__name {
+	display: none;
+	height: @fibonachiCount*4;
+	left: @fibonachiCount*.5;
+	line-height: @fibonachiCount*4;
+	position: absolute;
+	text-align: center;
+	top: @fibonachiCount;
+	width: 100%-((@fibonachiCount*.5)-1px);
+	.patern;
+	.radius (@value: 5px;);
+	a {
+		background: rgba(0, 0, 0, 0.5);
+		border: 3px solid #fff;
+		color: #eee;
+		display: inline-block;
+		font: normal 0.5rem sans-serif;
+		line-height: @fibonachiCount*.5;
+		padding: 0 @fibonachiCount*.1;
+		position: relative;
+		transition: all ease 1s;transition: all ease 1s;
+		.radius (@value: 10px;);
+		&:hover {
+			border: 3px solid #f33;
+		}
+	}
+}
+
+.portfolio__link {
+	color: #005298;
+	display: block;
+	font: oblique .9rem sans-serif;
+	line-height: @fibonachiCount;
+	text-align: center;
+	a {
+		display: block;
+	}
+}
+.portfolio__descript {
+	font: normal 0.8rem sans-serif;
+	text-align: center;
+}
 
 
 
 /* ====================================== footer ====================================== */
 
 .page__line_foot {
-	background: #777;
-	border-top: 4px solid #333;
+//	border-top: 4px solid #333;
 	height: @footer;
+	.lineargradientfooter;
 }
 .wrapper_footer {
-	
+	height: 100%;
+	text-align: center;
 }
-
+.text_footer {
+	color: #333;
+	font: bold 1.2rem sans-serif;
+	line-height: @footer;
+	text-align: center;
+	text-shadow: 0px 1px 0px #777;
+	a {
+		display: block;
+		height: 100%;
+		padding: 0 @fibonachiCount;
+	}
+	&:hover {
+		color: #ddd;
+		text-shadow: none;
+	}
+}
 /* ==========================================================================
    FONT-FACES /  FONT-FACES /  FONT-FACES /  FONT-FACES /  FONT-FACES /
    ========================================================================== */
