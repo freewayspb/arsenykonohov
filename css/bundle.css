@@ -756,6 +756,11 @@ a:visited {
 }
 .contact__item {
   position: relative;
+  -webkit-transition: all 0.07s ease-in-out;
+  -moz-transition: all 0.07s ease-in-out;
+  -ms-transition: all 0.07s ease-in-out;
+  -o-transition: all 0.07s ease-in-out;
+  transition: all 0.07s ease-in-out;
 }
 .contact__item:nth-child(1) {
   background: #880000 url(../img/contactsprites.png) 0 -50px no-repeat;
@@ -772,19 +777,14 @@ a:visited {
 .contact__item a {
   display: block;
   position: relative;
-  -webkit-transition: all 0.07s ease-in-out;
-  -moz-transition: all 0.07s ease-in-out;
-  -ms-transition: all 0.07s ease-in-out;
-  -o-transition: all 0.07s ease-in-out;
-  transition: all 0.07s ease-in-out;
 }
-.contact__item a:hover {
-  -webkit-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.9);
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.9);
+.contact__item:hover {
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
-.contact__item a:active {
+.contact__item:active {
   -webkit-box-shadow: inset 0px 3px 5px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0px 3px 5px 2px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0px 3px 5px 2px rgba(0, 0, 0, 0.4);

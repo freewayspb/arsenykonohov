@@ -379,15 +379,19 @@ a {
 	a {
 		display: block;
 		position: relative;
-		.transition (@transition: all 0.07s ease-in-out);
-		&:hover {
-			.shadow(@shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.9););
-			z-index: 10;
-		}
-		&:active {
-			.shadow(@shadow: inset 0px 3px 5px 2px rgba(0, 0, 0, 0.4););
-		}
+
 	}
+	
+	
+	.transition (@transition: all 0.07s ease-in-out);
+	&:hover {
+		.shadow(@shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.6););
+		z-index: 10;
+	}
+	&:active {
+		.shadow(@shadow: inset 0px 3px 5px 2px rgba(0, 0, 0, 0.4););
+	}
+	
 }
 
 
