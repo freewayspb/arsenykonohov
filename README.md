@@ -9,13 +9,13 @@ Watch my workflow. I've made this in  [trello.com](https://trello.com/b/lmn8D4kl
 
 #### My gitflow include: ####
 
-> **gh-pages** (release branch instead master branch. Make default on github)
+> **master** (release branch)
 
 > **dev** (general development branch)
 
-> **features** (for example: htmlbemfeatures, cssfeatures, and other...)
+> **features** (for example: htmlbem, cssbem, and other...)
 
-> **release** (pre-release branch for fix different mistakes)
+> **gh-pages** (pre-release branch for fix different mistakes. Made default on github)
 
 > **fix** (...if i've found mistakes after release project)
 

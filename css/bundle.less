@@ -344,12 +344,11 @@ a {
 	}
 }
 .contact__list {
-	color: #fff;
-	font: normal 0.95rem sans-serif;
-	line-height: @fibonachiCount+10px;
-	text-indent: @fibonachiCount+10px;
+	
 }
 .contact__item {
+	color: #fff;
+	font: normal 0.95rem sans-serif;
 	&:nth-child(1) {
 		background: #800 url(../img/contactsprites.png) 0 -50px no-repeat;
 		background-size: 17%;
@@ -363,11 +362,20 @@ a {
 		background-size: 17%;
 	}
 	position: relative;
+	.transition (@transition: all 0.07s ease-in-out);
+	
+	
 	a {
+		line-height: @fibonachiCount+10px;
+		text-indent: @fibonachiCount+10px;
 		display: block;
 		position: relative;
+		width: 100%;
+		&:hover {
+//			text-decoration: underline;
+		}
 	}
-	.transition (@transition: all 0.07s ease-in-out);
+	
 	&:hover {
 		.shadow(@shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.6););
 		z-index: 10;
@@ -411,6 +419,8 @@ a {
 	padding: 0 0 @fibonachiCount*2 0;
 	.clearfix;
 }
+
+
 .b-userpic {
 	float: left;
 	height: @fibonachiCount*7;
@@ -483,7 +493,7 @@ a {
 
 
 
-/* ====================================== my portfolio ====================================== */
+/* ====================================== portfolio ====================================== */
 .portfolio {
 	display: block;
 	position: relative;
