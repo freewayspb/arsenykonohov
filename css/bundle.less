@@ -104,7 +104,6 @@ html {
 }
 body {
 	height: 100%;
-//	background: url(../img/bg.png);
 	background: #f1f1f1;
 //	width: 100%;
 	min-width: 100%;
@@ -157,7 +156,6 @@ a {
 	position: relative;
 	.clearfix;
 }
-
 .wrapper__coll_left {
 	float: left;
 }
@@ -169,7 +167,6 @@ a {
 
 
 /* ====================================== header ====================================== */
-
 .page__line_head {
 	background: #444;
 	border-bottom: 4px solid #222;
@@ -265,7 +262,6 @@ a {
 
 
 /* =================== content =================== */
-
 .page__line_body {
 	min-height: 100%;
 	margin: -@header 0 -@footer 0;
@@ -275,6 +271,7 @@ a {
 	min-height: 100%;
 	padding: @fibonachiCount 0;
 }
+
 
 
 /* ====================================== navBar ====================================== */
@@ -305,35 +302,25 @@ a {
 		color: inherit;
 		display: block;
 		line-height: @fibonachiCount*3;
+		position: relative;
+		z-index: 10;
+		&:hover {
+			.shadow(@shadow: 0px 3px 4px -1px hsla(0, 0%, 0%, 0.6););
+			color: #333;
+			background: #fff;
+			z-index: 3;
+		}
+		&:active {
+			.shadow(@shadow: inset 0px 3px 5px 1px hsla(0, 0%, 0%, 0.6););
+			color: #444;
+			background: #ddd;
+		}
+		.transition (@transition: all 0.1s linear);
 	}
-//	&:last-child:after {
-//		display: none;
-//	}
-//	&:after {
-//		background: #aaa;
-//		bottom: 0;
-//		content: " ";
-//		display: block;
-//		height: 2px;
-//		left: 5%;
-//		position: absolute;
-//		width: 90%;
-//		z-index: 3;
-//	}
-	
-	&:hover {
-		.shadow(@shadow: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.4););
-		color: #333;
-		background: #fff;
-		z-index: 3;
-	}
-	&:active {
-		.shadow(@shadow: inset 0px 3px 5px 1px hsla(0, 0%, 0%, 0.4););
-		color: #444;
-		background: #ddd;
-	}
-	.transition (@transition: all 0.1s linear);
+
 }
+
+
 
 
 /* ====================================== contacts ====================================== */
@@ -362,7 +349,6 @@ a {
 	line-height: @fibonachiCount+10px;
 	text-indent: @fibonachiCount+10px;
 }
-
 .contact__item {
 	&:nth-child(1) {
 		background: #800 url(../img/contactsprites.png) 0 -50px no-repeat;
@@ -380,7 +366,6 @@ a {
 	a {
 		display: block;
 		position: relative;
-
 	}
 	.transition (@transition: all 0.07s ease-in-out);
 	&:hover {
@@ -395,7 +380,6 @@ a {
 
 
 /* ====================================== article ====================================== */
-
 .wrapper__coll_article {
 	width: @fibonachiCount*21;
 }
@@ -407,25 +391,18 @@ a {
 	display: block;
 	text-align: left
 }
-
 .text {
 	display: inline-block;
 	&:first-letter {
 		text-transform: uppercase;
 	}
 }
-
-
-
 .linehieght_head {
 	line-height: @fibonachiCount*2;
 }
 .linehieght_text {
 	line-height: @fibonachiCount*1.5;
 }
-
-
-
 .text_heading_article {
 	color: @headingText;
 	font: normal 34px sans-serif;
@@ -457,7 +434,6 @@ a {
 	width: 100%;
 }
 .userdescript_common {
-//	margin:  -@fibonachiCount*0.5 0 0 0;
 	width: 65% !important;
 }
 .userdescript__list {
@@ -475,9 +451,6 @@ a {
 .userdescript__content {
 	font: normal 1rem sans-serif;
 }
-
-
-
 .name {
 	text-transform: capitalize;
 }
@@ -487,9 +460,6 @@ a {
 	padding: 0 10px;
 	.lineargradientskils;
 }
-
-
-
 .stick {
 	margin-top: @fibonachiCount*.5;
 	padding-left: @fibonachiCount*3;
@@ -512,9 +482,8 @@ a {
 
 
 
+
 /* ====================================== my portfolio ====================================== */
-
-
 .portfolio {
 	display: block;
 	position: relative;
@@ -539,18 +508,13 @@ a {
 				background: #f1f1f1;
 				border: 3px solid #777;
 				color: #333;
-//				font: normal 1rem sans-serif;
-//				line-height: @fibonachiCount;
-//				padding: 0 @fibonachiCount*.5;
 				&:hover {
 					border: 3px solid #f00;
-//					.transition (@transition: all 0.3s ease) !important;
 				}
 			}
 		}
 	}
 }
-
 .portfolio__img_name {
 	display: block;
 	height: @fibonachiCount*4;
@@ -561,7 +525,6 @@ a {
 		.portfolio__name {display: block;}
 	}
 }
-
 .portfolio__img {
 	background: url(../img/some_site.png) no-repeat;
 	background-size: 100%;
@@ -621,7 +584,6 @@ a {
 			color: #c00;
 		}
 	}
-
 }
 .portfolio__descript {
 	font: normal 0.8rem sans-serif;
@@ -630,10 +592,11 @@ a {
 
 
 
+
+
 /* ====================================== footer ====================================== */
 
 .page__line_foot {
-//	border-top: 4px solid #333;
 	height: @footer;
 	.lineargradientfooter;
 }
