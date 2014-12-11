@@ -723,6 +723,43 @@ input {
 
 
 
+/* ====================================== modal window for admin ====================================== */
+.modal {
+	display: block;
+	height: 100%;
+	padding: 15% 0;
+	text-align: center;
+}
+.modal__wrapper {
+	background: #e7e7e7;
+	display: inline-block;
+	width: @fibonachiCount*13;
+	.shadow (@shadow: 0px 3px 5px 1px #888;);
+}
+.modal__header {
+	background: #e1e1e1;
+	padding: @fibonachiCount*.5 0 0 0;
+}
+.modal__body {
+	padding: 0 0 @fibonachiCount 0;
+}
+.modal__row {
+	display: block;
+	padding: @fibonachiCount*.5 0;
+}
+.modal__label {
+	color: #777;
+	font: normal 1.5rem sans-serif;
+	line-height: @fibonachiCount;
+}
+.enter {
+	background: #900;
+	.shadow (@shadow: 0px 3px 0px #300;);
+	&:active {
+		.shadow (@shadow: inset 0px 2px 2px 2px #500;);
+	}
+}
+
 
 /* ====================================== footer ====================================== */
 

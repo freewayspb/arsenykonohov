@@ -1164,6 +1164,48 @@ input {
   -moz-box-shadow: inset 0px 2px 2px 2px #333333;
   box-shadow: inset 0px 2px 2px 2px #333333;
 }
+/* ====================================== modal window for admin ====================================== */
+.modal {
+  display: block;
+  height: 100%;
+  padding: 15% 0;
+  text-align: center;
+}
+.modal__wrapper {
+  background: #e7e7e7;
+  display: inline-block;
+  width: 390px;
+  -webkit-box-shadow: 0px 3px 5px 1px #888888;
+  -moz-box-shadow: 0px 3px 5px 1px #888888;
+  box-shadow: 0px 3px 5px 1px #888888;
+}
+.modal__header {
+  background: #e1e1e1;
+  padding: 15px 0 0 0;
+}
+.modal__body {
+  padding: 0 0 30px 0;
+}
+.modal__row {
+  display: block;
+  padding: 15px 0;
+}
+.modal__label {
+  color: #777;
+  font: normal 1.5rem sans-serif;
+  line-height: 30px;
+}
+.enter {
+  background: #900;
+  -webkit-box-shadow: 0px 3px 0px #330000;
+  -moz-box-shadow: 0px 3px 0px #330000;
+  box-shadow: 0px 3px 0px #330000;
+}
+.enter:active {
+  -webkit-box-shadow: inset 0px 2px 2px 2px #550000;
+  -moz-box-shadow: inset 0px 2px 2px 2px #550000;
+  box-shadow: inset 0px 2px 2px 2px #550000;
+}
 /* ====================================== footer ====================================== */
 .page__line_foot {
   height: 90px;

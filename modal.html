@@ -21,8 +21,29 @@
 <!-- =================================================================
 		start webpage
 	================================================================= -->
-		<div class="b-page">
-			
+		<div class="b-page modal">
+			<div class="modal__wrapper">
+				<div class="modal__header article__header article__header_center linehieght_head">
+					<div class="text text_heading_article">авторизируйтесь</div>
+				</div>
+				<div class="modal__body">
+					<form action="">
+						<div class="modal__row">
+							<label for="login" class="text modal__label">логин</label>
+							<br>
+							<input type="text" id="login" placeholder="Введите логин">
+						</div>
+						<div class="modal__row">
+							<label for="pass" class="text modal__label">пароль</label>
+							<br>
+							<input type="password" id="pass" placeholder="Введите пароль">
+						</div>
+						<div class="modal__row">
+							<input type="submit" id="enter" class="formbutton enter">
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
