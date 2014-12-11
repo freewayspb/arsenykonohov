@@ -654,7 +654,7 @@ a:visited {
   background: #880000 url(../img/socialsprites.png) 6px -152px no-repeat;
   background-size: 100%;
 }
-/* =================== content =================== */
+/*  content  */
 .page__line_body {
   min-height: 100%;
   margin: -120px 0 -90px 0;
@@ -739,6 +739,9 @@ a:visited {
   padding: 30px 0 0 0;
   width: 240px;
 }
+.b-contact {
+  width: 100%;
+}
 .contact__heading {
   background: #600;
   color: #fff;
@@ -749,6 +752,9 @@ a:visited {
 }
 .contact__heading:first-letter {
   text-transform: uppercase;
+}
+.contact__list {
+  width: 100%;
 }
 .contact__item {
   color: #fff;
@@ -800,7 +806,9 @@ a:visited {
 .article__header {
   border-bottom: solid 2px #555555;
   display: block;
-  text-align: left;
+}
+.article__header_center {
+  text-align: center;
 }
 .text {
   display: inline-block;
@@ -831,6 +839,7 @@ a:visited {
 .article__content:after {
   clear: both;
 }
+/* ====================================== about ====================================== */
 .b-userpic {
   float: left;
   height: 210px;
@@ -1045,6 +1054,47 @@ a:visited {
 .portfolio__descript {
   font: normal 0.8rem sans-serif;
   text-align: center;
+}
+/* ====================================== request ====================================== */
+.connect * {
+  position: relative;
+}
+.connect__head {
+  background: #add;
+  height: 60px;
+}
+.connect__body {
+  background: #ddd;
+  display: block;
+  padding: 0 112.5px;
+}
+.connect__item {
+  padding: 30px 0;
+  text-align: center;
+}
+.requisite {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.requisite:before,
+.requisite:after {
+  content: "";
+  display: table;
+}
+.requisite:after {
+  clear: both;
+}
+.requisite__head {
+  text-align: left;
+}
+.requisite__col_left {
+  float: left;
+}
+.requisite__col_right {
+  float: right;
+}
+.mesage__head {
+  text-align: left;
 }
 /* ====================================== footer ====================================== */
 .page__line_foot {
