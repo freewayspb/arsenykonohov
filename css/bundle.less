@@ -607,6 +607,8 @@ a {
 }
 
 
+
+
 /* ====================================== request ====================================== */
 .connect * {
 	position: relative;
@@ -615,69 +617,106 @@ a {
 
 }
 .connect__head {
-	background: #add;
-	height: @fibonachiCount*2;
+
 }
 .connect__body {
-	background: #ddd;
+	background: #e7e9e9;
 	
 	display: block;
-	padding: 0 @fibonachiCount*3.75;
+	padding: @fibonachiCount @fibonachiCount*3;
 }
+textarea {
+	border: solid 1px #999;
+	color: #999;
+	overflow: auto;
+	outline: none;
+	resize: none;
+	padding: @fibonachiCount*.5;
+}
+input {
+	border: solid 1px #999;
+	color: #999;
+	font: normal 0.95rem sans-serif;
+	line-height: 1rem;
+	outline: none;
+	padding: @fibonachiCount*.3;
+}
+
 .connect__item {
-	padding: @fibonachiCount 0;
+	padding: @fibonachiCount 0 0 0;
 	text-align: center;
-}
-
-
-
-.requisite {
 	.clearfix;
 }
-.requisite__col {
-	
+.text_formhead {
+	color: @headingText;
+	font: bold 1rem sans-serif;
+	line-height: @fibonachiCount;
 }
-.requisite__head {
-	text-align: left;
-}
-.requisite__col_left {
+.col_left {
 	float: left;
 }
-.requisite__col_right {
+.col_right {
 	float: right;
 }
 
-
-
+.requisite {
+	
+}
+.requisite__col {
+	text-align: left;
+}
 .mesage {
 	
 }
 .mesage__head {
+	display: block;
+	width: 100%;
 	text-align: left;
+	text-indent: 0px;
 }
-
-
-
 .verify {
 	
 }
 .verify__head {
-	
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+.capture_get {
+	height: @fibonachiCount*3;
+//	padding: @fibonachiCount*1.2 0;
+}
+.capture_post {
+	line-height: @fibonachiCount*3;
 }
 .action {
-	
+	padding-bottom: @fibonachiCount;
 }
-
-
-
-
-
-
-
-
-
-
-
+.formbutton {
+	border: none;
+	color: #fff;
+	line-height: @fibonachiCount;
+	padding: 0 @fibonachiCount !important;
+	position: relative;
+	.radius (@value: 5px;);
+	&:active {
+		top: 2px;
+	}
+}
+.submit {
+	background: #900;
+	.shadow (@shadow: 0px 3px 0px #500;);
+	&:active {
+		.shadow (@shadow: inset 0px 2px 2px 2px #500;);
+	}
+}
+.reset {
+	background: #666;
+	.shadow (@shadow: 0px 3px 0px #333;);
+	&:active {
+		.shadow (@shadow: inset 0px 2px 2px 2px #333;);
+	}
+}
 
 
 
