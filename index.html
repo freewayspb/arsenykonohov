@@ -62,7 +62,7 @@
 					<div class="wrapper__coll wrapper__coll_left wrapper__coll_nav">
 						<div class="b-nav">
 							<div class="nav__list">
-								<div class="nav__item"><a href="index.html">обо мне</a></div>
+								<div class="nav__item"><a href="about.html">обо мне</a></div>
 								<div class="nav__item"><a href="portfolio.html">мои работы</a></div>
 								<div class="nav__item"><a href="connection.html">связаться со мной</a></div>
 							</div>
@@ -211,7 +211,7 @@
 									</div><!-- inline-block hack!!!!!!!
 								--><div class="portfolio__item">
 										<div class="portfolio__img_name">
-											<div class="portfolio__name"><a href="#">add project</a></div>
+											<div class="portfolio__name"><a href="modal.html">add project</a></div>
 											<div class="portfolio__img"><img src="" alt=""></div>
 										</div>
 										<div class="portfolio__link">example.com</div>
@@ -220,7 +220,62 @@
 								</div>
 							</div>
 						</div>
-
+						
+						<!--  requestpage  -->
+						<div class="b-article article_connect">
+							<div class="article__header article__header_center linehieght_head">
+								<div class="text text_heading_article">У вас интересное предложение?<br>Свяжитесь со мной</div>
+							</div>
+							<div class="article__content">
+								<div class="connect">
+									<div class="connect__head"></div>
+									<div class="connect__body">
+										<form action="" method="post">
+										
+											<div class="requisite connect__item">
+												<div class="requisite__col col_left">
+													<label for="name" class="text text_formhead">Введите ваше имя:</label>
+													<br>
+													<input type="text" id="name" placeholder="Как вас зовут">
+												</div>
+												<div class="requisite__col col_right">
+													<label for="email" class="text text_formhead">email:</label>
+													<br>
+													<input type="text" id="email" placeholder="Ваш email">
+												</div>
+											</div>
+											
+											<div class="mesage connect__item">
+												<div class="mesage__head">
+													<label for="mesage" class="text text_formhead">сообщение</label>
+												</div>
+												<textarea name="mesage" id="mesage" cols="50" rows="10" placeholder="Кратко в чем суть" ></textarea>
+											</div>
+											
+											<div class="verify connect__item">
+												<div class="verify__head"><label for="capture" class="text text_formhead">введиде код, указанный на картинке</label></div>
+												<div class="col_left">
+													<input type="text" id="" class="capture_get">
+												</div>
+												<div class="col_right capture_post">
+													<input type="text" id="capture" placeholder="Ведите код" class="">
+												</div>
+											</div>
+											
+											<div class="action connect__item">
+												<div class="col_left">
+													<input type="submit" id="submit" class="formbutton submit">
+												</div>
+												<div class="col_right">
+													<input type="reset" id="reset" class="formbutton reset">
+												</div>
+											</div>
+											
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 
