@@ -261,7 +261,7 @@ a {
 
 
 
-/* =================== content =================== */
+/*  content  */
 .page__line_body {
 	min-height: 100%;
 	margin: -@header 0 -@footer 0;
@@ -278,6 +278,7 @@ a {
 
 .wrapper__coll_nav {
 	width: @fibonachiCount*8;
+//	position: fixed;
 }
 .b-nav {
 	.clearfix;
@@ -325,12 +326,13 @@ a {
 
 /* ====================================== contacts ====================================== */
 .wrapper__coll_contact {
-	background: #f1f1f1;
 	padding: @fibonachiCount 0 0 0;
 	width: @fibonachiCount*8;
+//	position: fixed;
+//	top: @fibonachiCount*14;
 }
 .b-contact {
-	
+	width: 100%;
 }
 .contact__heading {
 	background: #600;
@@ -344,12 +346,11 @@ a {
 	}
 }
 .contact__list {
-	color: #fff;
-	font: normal 0.95rem sans-serif;
-	line-height: @fibonachiCount+10px;
-	text-indent: @fibonachiCount+10px;
+	width: 100%;
 }
 .contact__item {
+	color: #fff;
+	font: normal 0.95rem sans-serif;
 	&:nth-child(1) {
 		background: #800 url(../img/contactsprites.png) 0 -50px no-repeat;
 		background-size: 17%;
@@ -363,11 +364,20 @@ a {
 		background-size: 17%;
 	}
 	position: relative;
+	.transition (@transition: all 0.07s ease-in-out);
+	
+	
 	a {
+		line-height: @fibonachiCount+10px;
+		text-indent: @fibonachiCount+10px;
 		display: block;
 		position: relative;
+		width: 100%;
+		&:hover {
+//			text-decoration: underline;
+		}
 	}
-	.transition (@transition: all 0.07s ease-in-out);
+	
 	&:hover {
 		.shadow(@shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.6););
 		z-index: 10;
@@ -389,7 +399,9 @@ a {
 .article__header {
 	border-bottom: solid 2px @headingText;
 	display: block;
-	text-align: left
+}
+.article__header_center {
+	text-align: center;
 }
 .text {
 	display: inline-block;
@@ -411,6 +423,12 @@ a {
 	padding: 0 0 @fibonachiCount*2 0;
 	.clearfix;
 }
+
+
+
+
+
+/* ====================================== about ====================================== */
 .b-userpic {
 	float: left;
 	height: @fibonachiCount*7;
@@ -483,7 +501,7 @@ a {
 
 
 
-/* ====================================== my portfolio ====================================== */
+/* ====================================== portfolio ====================================== */
 .portfolio {
 	display: block;
 	position: relative;
@@ -592,6 +610,155 @@ a {
 
 
 
+
+/* ====================================== request ====================================== */
+.connect * {
+	position: relative;
+}
+.connect {
+
+}
+.connect__head {
+
+}
+.connect__body {
+	background: #e7e9e9;
+	
+	display: block;
+	padding: @fibonachiCount @fibonachiCount*3;
+}
+textarea {
+	border: solid 1px #999;
+	color: #999;
+	overflow: auto;
+	outline: none;
+	resize: none;
+	padding: @fibonachiCount*.5;
+}
+input {
+	border: solid 1px #999;
+	color: #999;
+	font: normal 0.95rem sans-serif;
+	line-height: 1rem;
+	outline: none;
+	padding: @fibonachiCount*.3;
+}
+
+.connect__item {
+	padding: @fibonachiCount 0 0 0;
+	text-align: center;
+	.clearfix;
+}
+.text_formhead {
+	color: @headingText;
+	font: bold 1rem sans-serif;
+	line-height: @fibonachiCount;
+}
+.col_left {
+	float: left;
+}
+.col_right {
+	float: right;
+}
+
+.requisite {
+	
+}
+.requisite__col {
+	text-align: left;
+}
+.mesage {
+	
+}
+.mesage__head {
+	display: block;
+	width: 100%;
+	text-align: left;
+	text-indent: 0px;
+}
+.verify {
+	
+}
+.verify__head {
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+.capture_get {
+	height: @fibonachiCount*3;
+//	padding: @fibonachiCount*1.2 0;
+}
+.capture_post {
+	line-height: @fibonachiCount*3;
+}
+.action {
+	padding-bottom: @fibonachiCount;
+}
+.formbutton {
+	border: none;
+	color: #fff;
+	line-height: @fibonachiCount;
+	padding: 0 @fibonachiCount !important;
+	position: relative;
+	.radius (@value: 5px;);
+	&:active {
+		top: 2px;
+	}
+}
+.submit {
+	background: #900;
+	.shadow (@shadow: 0px 3px 0px #500;);
+	&:active {
+		.shadow (@shadow: inset 0px 2px 2px 2px #500;);
+	}
+}
+.reset {
+	background: #666;
+	.shadow (@shadow: 0px 3px 0px #333;);
+	&:active {
+		.shadow (@shadow: inset 0px 2px 2px 2px #333;);
+	}
+}
+
+
+
+
+/* ====================================== modal window for admin ====================================== */
+.modal {
+	display: block;
+	height: 100%;
+	padding: 15% 0;
+	text-align: center;
+}
+.modal__wrapper {
+	background: #e7e7e7;
+	display: inline-block;
+	width: @fibonachiCount*13;
+	.shadow (@shadow: 0px 3px 5px 1px #888;);
+}
+.modal__header {
+	background: #e1e1e1;
+	padding: @fibonachiCount*.5 0 0 0;
+}
+.modal__body {
+	padding: 0 0 @fibonachiCount 0;
+}
+.modal__row {
+	display: block;
+	padding: @fibonachiCount*.5 0;
+}
+.modal__label {
+	color: #777;
+	font: normal 1.5rem sans-serif;
+	line-height: @fibonachiCount;
+}
+.enter {
+	background: #900;
+	.shadow (@shadow: 0px 3px 0px #300;);
+	&:active {
+		.shadow (@shadow: inset 0px 2px 2px 2px #500;);
+	}
+}
 
 
 /* ====================================== footer ====================================== */
