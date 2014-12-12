@@ -10,7 +10,8 @@
 @header: @fibonachiCount*4;
 @footer: @fibonachiCount*3;
 @wrapperForDesctop: 960px;
-
+@desktoppage: @fibonachiCount*32;
+@tabletpage: @fibonachiCount*26;
 @headingText: #555;
 
 
@@ -122,8 +123,7 @@ a {
 .b-page {
 	height: 100%;
 	position: relative;
-//	width: 100%;
-	min-width: 100%;
+	width: 100%;
 	.clearfix;
 }
 
@@ -134,7 +134,6 @@ a {
 	min-width: 100%;
 	position: relative;
 	width: 100%;
-	min-width: 100%;
 	.clearfix;
 }
 
@@ -177,7 +176,7 @@ a {
 }
 
 
-/* logo */
+/* ====================================== logo ====================================== */
 .wrapper__coll_logo {
 	height: (@fibonachiCount*4)-4px;
 	padding: (@fibonachiCount)-5px 0 0 0;
@@ -205,12 +204,14 @@ a {
 .wrapper__coll_last_social {
 	display: none;
 	position: relative;
+	width: 100%;
 	z-index: 5
 }
 .b-social {
 	display: block;
 	height: 100%;
 	padding: @fibonachiCount 0 0 0;
+	text-align: center;
 	.clearfix;
 }
 .social__item {
@@ -287,7 +288,6 @@ a {
 	.clearfix;
 }
 .nav__item {
-	background: #f1f1f1;
 	color: #666;
 	display: block;
 	float: left;
@@ -328,8 +328,6 @@ a {
 .wrapper__coll_contact {
 	padding: @fibonachiCount 0 0 0;
 	width: @fibonachiCount*8;
-//	position: fixed;
-//	top: @fibonachiCount*14;
 }
 .b-contact {
 	width: 100%;
@@ -399,6 +397,7 @@ a {
 .article__header {
 	border-bottom: solid 2px @headingText;
 	display: block;
+	padding-top: @fibonachiCount*.4;
 }
 .article__header_center {
 	text-align: center;
@@ -452,7 +451,7 @@ a {
 	width: 100%;
 }
 .userdescript_common {
-	width: 65% !important;
+	width: 65%;
 }
 .userdescript__list {
 	position: relative;

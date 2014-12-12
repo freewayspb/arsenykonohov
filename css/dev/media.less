@@ -1,10 +1,100 @@
-/* ============================ tablet ============================ */
-@media only screen and (min-width: 35em) {
 
+@fibonachiCount: 30px;
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+	transition:      	@transition;
 }
-
+/* ============================ tablet ============================ */
+@media only screen and (min-width: 40px) and (max-width: 990px) {
+	.wrapper_body {	padding: 0;}
+	.b-wrapper {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;}
+	.wrapper__coll_logo {width: 100%;text-align: center;}
+	.description {display: inline-block;}
+	.wrapper__coll_firsst_social {display: none;}
+	.wrapper__coll_last_social {display: block;}
+	.b-social {background: #600; padding: @fibonachiCount 0;}
+	.social__item {
+		display: inline-block;
+		float: none;
+		margin: 0 @fibonachiCount*.3;}
+	.wrapper__coll_nav {width: 100%;}
+	.b-nav {padding: @fibonachiCount*.5 0 @fibonachiCount*3 0;}
+	.nav__item {
+		font: normal 34px sans-serif;
+		text-align: center;
+		text-indent: 0px;
+		width: 100%;}
+	.wrapper__coll_contact {
+		padding: 0 0 @fibonachiCount 0;
+		width: 100%;}
+	.contact__heading { display: none;}
+	.contact__item {
+		font: normal 1rem sans-serif;
+		&:nth-child(1) {
+			background: #800;
+		}
+		&:nth-child(2) {
+			background: #a00;
+		}
+		&:nth-child(3) {
+			background: #c00;
+		}
+		a {
+			line-height: @fibonachiCount*2;
+			text-indent: 0px;
+			text-align: center;}}
+	.wrapper__coll_article {width: 100%;}
+	.article__header {text-align: center; background: #666;}
+	.text_heading_article {color:#eee; font: normal 34px sans-serif;}
+	.article__content {text-align: center;}
+	.b-userpic {
+		display: inline-block;
+		float: none;
+		margin: @fibonachiCount 0 0 0;
+		overflow: hidden;
+		border: 8px solid #eee;}
+	.b-userdescript {
+		display: inline-block;
+		float: none;
+		margin: @fibonachiCount 0;}
+	.userdescript_common {width: 80%;}
+	.userdescript__head {color: #700; font: bold 21px sans-serif;}
+	.userdescript__content {font: normal 21px sans-serif;}
+	.skils {
+		color: #fff;
+		padding: 3px 10px;
+		font-size: 21px;}
+	
+	.stick {padding-left: @fibonachiCount;}
+	.work {background: none;}
+	.edu {background: none;}
+	.loft {background: none;}
+	.portfolio {
+		display: block;
+		position: relative;
+		text-align: center;
+	}
+	.portfolio__item {width: 50%;}
+	.portfolio__img_name {height: @fibonachiCount*6;}
+	.portfolio__name {line-height: @fibonachiCount*6;}
+	.portfolio__link {font: oblique 21px sans-serif;line-height: @fibonachiCount*2}
+	.portfolio__descript {display: none;}
+}
 /* ============================ phones ============================ */
-
+@media only screen and (min-width: 1px) and (max-width: 639px) {
+	.portfolio__item {width: 70%;}
+	.portfolio__img_name {height: @fibonachiCount*6;}
+}
+@media only screen and (min-width: 1px) and (max-width: 480px) {
+	.portfolio__item {width: 90%;}
+	.portfolio__img_name {height: @fibonachiCount*6;}
+}
 
 /* ============================ Print styles ============================ */
 @media print {
